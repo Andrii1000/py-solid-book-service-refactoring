@@ -20,7 +20,7 @@ class XmlSerializer(SerializerBase):
     def serializer(self, book: Book) -> str:
         root = Element("book")
         title = SubElement(root, "title")
-        title.text =book.title
+        title.text = book.title
         content = SubElement(root, "content")
         content.text = book.content
         return tostring(root, encoding="unicode")
